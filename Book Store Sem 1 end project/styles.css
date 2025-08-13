@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%; 
+    background-color: #ddd;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    
+}
+
+.sidebar .logo img {
+    width: 70px;
+    height: 70px;
+    margin-right: 0px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 15px;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #254370;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+
+ul li a i {
+    margin-right: 10px; 
+}
+
+/* Navbar */
+.navbar {
+    margin-left: 220px; 
+    height: 70px;
+    background-color: #365b94;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    justify-content: space-between;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding-left: 720px;
+}
+
+h3{
+    color:#254370;
+}
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #f4f4f4;
+}
+
+/* Content Area */
+.container {
+    margin-left: 220px; 
+    margin-top: 0px; 
+    padding: 20px;
+}
+
+/* Hero Section */
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(54, 92, 148, 0.685); 
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.main-text {
+    max-width: 50%; 
+    animation: slideInFromRight 1s ease-out forwards;
+    opacity: 0; 
+}
+
+.main h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #254370;
+}
+
+.main p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.main-image {
+    max-width: 45%;
+    animation: floatInFromLeft 1s ease-out forwards;
+    opacity: 0; 
+}
+
+/* Animation for image */
+@keyframes floatInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.main-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.feature {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feature i {
+    font-size: 40px;
+    color: #254370;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 16px;
+}
+
+/* Our Top Seller Books Section */
+.top-sellers {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.top-sellers h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #182b47;
+    background-color:  rgba(54, 92, 148, 0.685) ;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/* Books Grid */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.book h3 {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+}
+
+footer {
+    margin-left: 220px;
+    height: 80px;
+    background-color: #365b94;
+    color: white;
+    display: flex;
+    justify-content: flex-end; /* Aligns text to the right */
+    align-items: center; /* Centers text vertically */
+    padding: 40px 20px; /* Horizontal padding only */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: end;
+}
+
+
+/* Book Details Section */
+.book-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.book-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.book-info {
+    max-width: 65%;
+}
+
+.book-info h2 {
+    font-size: 28px;
+    color: #254370;
+    margin-bottom: 10px;
+}
+
+.book-info p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.add-to-cart {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #f1c915;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.back-to-categories{
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #c51e1e;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+
+}
+
+
+.back-to-categories a {
+    color: white;
+    text-decoration: none;
+}
+
+.related-books h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #182b47;
+    background-color:  rgba(54, 92, 148, 0.685) ;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+}
+
+.related-books .books-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    justify-items: center;
+}
+
+.related-books .book img {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+

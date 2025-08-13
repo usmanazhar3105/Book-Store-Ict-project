@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="shopingcart.css">
+    <title>Shopping Cart</title>
+    
+</head>
+<body id="body">
+    <div class="container">
+        <h2>Shopping Cart</h2>
+        
+        <!-- Cart Item 1 -->
+        <div class="cart-item">
+            <img src="https://m.media-amazon.com/images/I/81gepf1eMqL._AC_UF1000,1000_QL80_.jpg" alt="Book 1">
+            <div class="item-details">
+                <div class="item-title">Book Title 1</div>
+                <div class="item-quantity">Quantity: 1</div>
+                <div class="item-price">$10</div>
+            </div>
+            <div class="actions">
+                <form action="remove_item.php" method="POST">
+                    <input type="hidden" name="item_id" value="1">
+                    <button type="submit">Remove</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Cart Item 2 -->
+        <div class="cart-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXmow8QGoUxQCbdE70iUNub8ObBYINje0kpg&s" alt="Book 2">
+            <div class="item-details">
+                <div class="item-title">Book Title 2</div>
+                <div class="item-quantity">Quantity: 2</div>
+                <div class="item-price">$20</div>
+            </div>
+            <div class="actions">
+                <button>Remove</button>
+            </div>
+        </div>
+
+        <!-- Cart Item 3 -->
+        <div class="cart-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlXSHwF50aCzi2sQljIjDRQoT7xMGIW6ofYQ&s" alt="Book 3">
+            <div class="item-details">
+                <div class="item-title">Book Title 3</div>
+                <div class="item-quantity">Quantity: 1</div>
+                <div class="item-price">$15</div>
+            </div>
+            <div class="actions">
+                <button>Remove</button>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="summary">
+            Total: <span>$45</span>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="buttons">
+            <a href="main.html">Continue Shopping</a>
+            <a href="contact_page.html">Proceed to Checkout</a>
+        </div>
+    </div>
+</body>
+</html>
